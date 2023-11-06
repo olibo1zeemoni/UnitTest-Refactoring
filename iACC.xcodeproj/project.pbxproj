@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -230,8 +230,8 @@
 				08927BCC268618AC009195BD /* NotImplementedViewControllers.swift */,
 				080833DF268F609C00A8099A /* Helpers.swift */,
 				08927BCA268618AC009195BD /* User.swift */,
-				08927BCB268618AC009195BD /* FriendsAPI.swift */,
 				08927BC7268618AC009195BD /* FriendsCache.swift */,
+				08927BCB268618AC009195BD /* FriendsAPI.swift */,
 				08927BC8268618AC009195BD /* TransfersAPI.swift */,
 				08927BC6268618AC009195BD /* CardAPI.swift */,
 				080833E1268F69C200A8099A /* ArticlesAPI.swift */,

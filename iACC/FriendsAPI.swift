@@ -24,7 +24,7 @@ class FriendsAPI {
 	}
     
     
-    func fetchFrinds(completion: (Result<[Friend], Error>) -> Void) {
+    func fetchFriends(completion: (Result<[Friend], Error>) -> Void) {
         
     }
     

@@ -80,7 +80,7 @@ class NotImplementedViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "background")
 
 		let label = UILabel()
 		label.text = "Not implemented in this demo."

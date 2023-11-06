@@ -16,6 +16,10 @@ class ListViewController: UITableViewController {
     var service: ItemService?
     var items = [ItemViewModel]()
     
+    var retryCount = 0
+    var maxRetryCount = 0
+    var shouldRetry = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +39,11 @@ class ListViewController: UITableViewController {
     
     @objc private func refresh() {
         refreshControl?.beginRefreshing()
-        service?.loadItems(completion: handleAPIResult(_:)) 
+        service?.loadItems(completion: handleAPIResult)
     }
     
     private func handleAPIResult(_ result: Result<[ItemViewModel], Error>) {
+        
         switch result {
         case let .success(items):
             
@@ -48,6 +53,7 @@ class ListViewController: UITableViewController {
             
             
         case let .failure(error):
+            
             self.show(error: error)
             self.refreshControl?.endRefreshing()
         }
