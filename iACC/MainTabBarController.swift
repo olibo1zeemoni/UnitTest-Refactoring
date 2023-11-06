@@ -264,11 +264,11 @@ struct SentTransfersAPIItemServiceAdaptor: ItemService {
         
         api.loadTransfers { result in
             DispatchQueue.mainAsyncIfNeeded {
-                completion(result.map({ transfers in
-                    transfers.filter{ $0.isSender }
-                    .map { transfer in
-                        ItemViewModel(transfer: transfer, longDateStyle: true) {
-                            select(transfer)
+                completion(result.map({ items in
+                    items.filter{ $0.isSender }
+                    .map { item in
+                        ItemViewModel(transfer: item, longDateStyle: true) {
+                            select(item)
                         }
                     }
                 }))

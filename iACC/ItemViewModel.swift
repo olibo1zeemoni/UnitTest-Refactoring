@@ -36,7 +36,6 @@ extension ItemViewModel {
         
         let amount = numberFormatter.string(from: transfer.amount as NSNumber)!
         title = "\(amount) • \(transfer.description)"
-        select = selection
         let dateFormatter = Formatters.date
         if longDateStyle {
             dateFormatter.dateStyle = .long
@@ -47,6 +46,8 @@ extension ItemViewModel {
             dateFormatter.timeStyle = .short
             subtitle = "Received from: \(transfer.sender) on \(dateFormatter.string(from: transfer.date))"
         }
+        
+        select = selection
         
     }
 }

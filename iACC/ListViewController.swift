@@ -15,10 +15,8 @@ class ListViewController: UITableViewController {
     
     var service: ItemService?
     var items = [ItemViewModel]()
-    
-    var retryCount = 0
-    var maxRetryCount = 0
-    var shouldRetry = false
+
+    //delete
     
     
     override func viewDidLoad() {
@@ -46,7 +44,6 @@ class ListViewController: UITableViewController {
         
         switch result {
         case let .success(items):
-            
             self.items = items
             self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
